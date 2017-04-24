@@ -28,7 +28,11 @@
           <p>{{ site.description | default: site.github.project_tagline }}</p>
           <hr>
         </div>
-        <pre>{{ site.github | jsonify }}</pre>
+        <div>
+          {% highlight javascript %}
+            {{ site.github | jsonify }}
+          {% endhighlight %}
+        </div>
         {{ content }}
       </section>
     </div>
